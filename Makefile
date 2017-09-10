@@ -14,7 +14,8 @@ docs/index.%: *.proto
 	$(protoc_cmd) protoc --doc_out=$(format),$(notdir $@):$(docs_dir) *.proto
 
 docs/clean:
-	- rm docs/*
+	- rm -rf docs/
+	- mkdir docs/
 
 current_version = $(shell git describe --tags --abbrev=0)
 version ?= $(shell ./bin/increment_version.sh -p $(current_version))

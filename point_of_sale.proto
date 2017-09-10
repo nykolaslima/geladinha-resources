@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.zxventures.geladinha.resources.pointOfSale;
+
+option java_multiple_files = true;
+
+import "geometry.proto";
+
+/**
+ * [PointOfSale] is the representation of a beer commercial point of sale in ZX-Ventures plataform.
+ */
+message PointOfSale {
+    int64 id = 1;
+    string trading_name = 2;
+    string owner_name = 3;
+    string document = 4;
+    com.zxventures.geladinha.resources.geometry.MultiPolygon coverage_area = 5;
+    com.zxventures.geladinha.resources.geometry.Point address = 6;
+}
