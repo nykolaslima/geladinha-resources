@@ -18,7 +18,7 @@ message MultiPolygon {
  * [Polygon](https://tools.ietf.org/html/rfc7946#section-3.1.6) is represented as a list of [LinearString]s.
  */
 message Polygon {
-    repeated LinearString linear_rings = 1;
+    repeated LinearString linear_strings = 1;
 }
 
 /**
@@ -33,6 +33,6 @@ message LinearString {
  * given its latitude and longitude.
  */
 message Point {
-    int32 latitude = 1;
-    int32 longitude = 2;
+    float latitude = 1;
+    float longitude = 2;
 }

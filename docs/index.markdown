@@ -43,8 +43,8 @@ given its latitude and longitude.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| latitude | [int32](#int32) | optional |  |
-| longitude | [int32](#int32) | optional |  |
+| latitude | [float](#float) | optional |  |
+| longitude | [float](#float) | optional |  |
 
 
 <a name="com.zxventures.geladinha.resources.geometry.Polygon"/>
@@ -53,7 +53,7 @@ given its latitude and longitude.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| linear_rings | [LinearString](#com.zxventures.geladinha.resources.geometry.LinearString) | repeated |  |
+| linear_strings | [LinearString](#com.zxventures.geladinha.resources.geometry.LinearString) | repeated |  |
 
 
 
