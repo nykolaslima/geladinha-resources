@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package com.zxventures.geladinha.resources.common;
+
+option java_multiple_files = true;
+
+/**
+ * Error resource is a representation of any unexpected error.
+ */
+message Error {
+    string message = 1;
+}
+
+/**
+ * A wrapper to accumulate several [Message]s.
+ */
+message Messages {
+    repeated Message messages = 1;
+}
+
+/**
+ * [Message] is a representation of any message that should be sent to consumer clients.
+ */
+message Message {
+    MessageCategory category = 1;
+    string target = 2;
+    string message = 3;
+    string key = 4;
+    repeated string args = 5;
+}
+
+/**
+ * [MessageCategory] is the way to group Messages by it's meaning.
+ */
+enum MessageCategory {
+    INFO = 0;
+    VALIDATION = 1;
+    ERROR = 2;
+}

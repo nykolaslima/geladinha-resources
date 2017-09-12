@@ -2,6 +2,11 @@
 <a name="top"/>
 
 ## Table of Contents
+* [common.proto](#common.proto)
+ * [Error](#com.zxventures.geladinha.resources.common.Error)
+ * [Message](#com.zxventures.geladinha.resources.common.Message)
+ * [Messages](#com.zxventures.geladinha.resources.common.Messages)
+ * [MessageCategory](#com.zxventures.geladinha.resources.common.MessageCategory)
 * [geometry.proto](#geometry.proto)
  * [LinearString](#com.zxventures.geladinha.resources.geometry.LinearString)
  * [MultiPolygon](#com.zxventures.geladinha.resources.geometry.MultiPolygon)
@@ -10,6 +15,58 @@
 * [point_of_sale.proto](#point_of_sale.proto)
  * [PointOfSale](#com.zxventures.geladinha.resources.pointOfSale.PointOfSale)
 * [Scalar Value Types](#scalar-value-types)
+
+<a name="common.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## common.proto
+
+
+
+<a name="com.zxventures.geladinha.resources.common.Error"/>
+### Error
+Error resource is a representation of any unexpected error.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| message | [string](#string) | optional |  |
+
+
+<a name="com.zxventures.geladinha.resources.common.Message"/>
+### Message
+[Message] is a representation of any message that should be sent to consumer clients.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| category | [MessageCategory](#com.zxventures.geladinha.resources.common.MessageCategory) | optional |  |
+| target | [string](#string) | optional |  |
+| message | [string](#string) | optional |  |
+| key | [string](#string) | optional |  |
+| args | [string](#string) | repeated |  |
+
+
+<a name="com.zxventures.geladinha.resources.common.Messages"/>
+### Messages
+A wrapper to accumulate several [Message]s.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| messages | [Message](#com.zxventures.geladinha.resources.common.Message) | repeated |  |
+
+
+
+<a name="com.zxventures.geladinha.resources.common.MessageCategory"/>
+### MessageCategory
+[MessageCategory] is the way to group Messages by it's meaning.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| INFO | 0 |  |
+| VALIDATION | 1 |  |
+| ERROR | 2 |  |
+
+
+
 
 <a name="geometry.proto"/>
 <p align="right"><a href="#top">Top</a></p>

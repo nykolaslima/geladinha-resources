@@ -173,6 +173,35 @@
     <div id="toc-container">
       <ul id="toc">
         <li>
+          <a href="#common.proto">common.proto</a>
+          <ul>
+            <li>
+              <a href="#com.zxventures.geladinha.resources.common.Error">
+                <span class="badge">M</span>
+                Error
+              </a>
+            </li>
+            <li>
+              <a href="#com.zxventures.geladinha.resources.common.Message">
+                <span class="badge">M</span>
+                Message
+              </a>
+            </li>
+            <li>
+              <a href="#com.zxventures.geladinha.resources.common.Messages">
+                <span class="badge">M</span>
+                Messages
+              </a>
+            </li>
+            <li>
+              <a href="#com.zxventures.geladinha.resources.common.MessageCategory">
+                <span class="badge">E</span>
+                MessageCategory
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
           <a href="#geometry.proto">geometry.proto</a>
           <ul>
             <li>
@@ -216,6 +245,103 @@
       </ul>
     </div>
 
+    <div class="file-heading">
+      <h2 id="common.proto">common.proto</h2><a href="#title">Top</a>
+    </div>
+    
+    <h3 id="com.zxventures.geladinha.resources.common.Error">Error</h3>
+    <p>Error resource is a representation of any unexpected error.</p>
+    <table class="field-table">
+      <thead>
+        <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>message</td>
+          <td><a href="#string">string</a></td>
+          <td>optional</td>
+          <td><p></p></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="com.zxventures.geladinha.resources.common.Message">Message</h3>
+    <p>[Message] is a representation of any message that should be sent to consumer clients.</p>
+    <table class="field-table">
+      <thead>
+        <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>category</td>
+          <td><a href="#com.zxventures.geladinha.resources.common.MessageCategory">MessageCategory</a></td>
+          <td>optional</td>
+          <td><p></p></td>
+        </tr>
+        <tr>
+          <td>target</td>
+          <td><a href="#string">string</a></td>
+          <td>optional</td>
+          <td><p></p></td>
+        </tr>
+        <tr>
+          <td>message</td>
+          <td><a href="#string">string</a></td>
+          <td>optional</td>
+          <td><p></p></td>
+        </tr>
+        <tr>
+          <td>key</td>
+          <td><a href="#string">string</a></td>
+          <td>optional</td>
+          <td><p></p></td>
+        </tr>
+        <tr>
+          <td>args</td>
+          <td><a href="#string">string</a></td>
+          <td>repeated</td>
+          <td><p></p></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="com.zxventures.geladinha.resources.common.Messages">Messages</h3>
+    <p>A wrapper to accumulate several [Message]s.</p>
+    <table class="field-table">
+      <thead>
+        <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>messages</td>
+          <td><a href="#com.zxventures.geladinha.resources.common.Message">Message</a></td>
+          <td>repeated</td>
+          <td><p></p></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="com.zxventures.geladinha.resources.common.MessageCategory">MessageCategory</h3>
+    <p>[MessageCategory] is the way to group Messages by it's meaning.</p>
+    <table class="enum-table">
+      <thead>
+        <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>INFO</td>
+          <td>0</td>
+          <td><p></p></td>
+        </tr>
+        <tr>
+          <td>VALIDATION</td>
+          <td>1</td>
+          <td><p></p></td>
+        </tr>
+        <tr>
+          <td>ERROR</td>
+          <td>2</td>
+          <td><p></p></td>
+        </tr>
+      </tbody>
+    </table>
     <div class="file-heading">
       <h2 id="geometry.proto">geometry.proto</h2><a href="#title">Top</a>
     </div>
