@@ -17,3 +17,10 @@ message PointOfSale {
     com.zxventures.geladinha.resources.geometry.MultiPolygon coverage_area = 5;
     com.zxventures.geladinha.resources.geometry.Point address = 6;
 }
+
+/**
+ * A list of [PointOfSale].
+ */
+message PointsOfSale {
+    repeated PointOfSale pointsOfSale = 1;
+}

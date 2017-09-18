@@ -14,6 +14,7 @@
  * [Polygon](#com.zxventures.geladinha.resources.geometry.Polygon)
 * [point_of_sale.proto](#point_of_sale.proto)
  * [PointOfSale](#com.zxventures.geladinha.resources.pointOfSale.PointOfSale)
+ * [PointsOfSale](#com.zxventures.geladinha.resources.pointOfSale.PointsOfSale)
 * [Scalar Value Types](#scalar-value-types)
 
 <a name="common.proto"/>
@@ -136,6 +137,15 @@ given its latitude and longitude.
 | document | [string](#string) | optional |  |
 | coverage_area | [MultiPolygon](#com.zxventures.geladinha.resources.geometry.MultiPolygon) | optional |  |
 | address | [Point](#com.zxventures.geladinha.resources.geometry.Point) | optional |  |
+
+
+<a name="com.zxventures.geladinha.resources.pointOfSale.PointsOfSale"/>
+### PointsOfSale
+A list of [PointOfSale].
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| pointsOfSale | [PointOfSale](#com.zxventures.geladinha.resources.pointOfSale.PointOfSale) | repeated |  |
 
 
 
